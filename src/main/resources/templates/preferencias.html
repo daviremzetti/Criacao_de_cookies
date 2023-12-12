@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preferências</title>
+</head>
+
+<body>
+    <h1>Informe suas preferências para o site</h1>
+    <form th:action="@{/preferencias}" method="POST">
+        <p><label for="txtNome">Seu nome:</label><input type="text" name="nome" id="txtNome" /></p>
+        <p><label for="selEstilo">Seu esquema de cores favorito</label>
+            <select name="estilo" id="selEstilo">
+                <option value="claro">Tema Claro</option>
+                <option value="escuro">Tema Escuro</option>
+            </select>
+        </p>
+        <p><label for="selFonte">Sua fonte favorita</label>
+            <select name="fonte" id="selFonte">
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Verdana">Verdana</option>
+            </select>
+        </p>
+        <p><input type="submit" value="OK" /></p>
+    </form>
+</body>
+
+</html>
